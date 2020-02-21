@@ -7,7 +7,7 @@
 </div>
 <p><?php echo $data['pharmaceutical']->body; ?></p>
 
-<?php if($data['pharmaceutical']->user_id == $_SESSION['user_id']) : ?>
+<?php if (isset($_SESSION['user_id'])) : ?>
   <hr>
   <a href="<?php echo URLROOT; ?>/pharmaceuticals/edit/<?php echo $data['pharmaceutical']->id; ?>" class="btn btn-dark">Edit</a>
 

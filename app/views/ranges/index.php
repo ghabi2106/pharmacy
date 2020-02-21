@@ -4,11 +4,13 @@
     <div class="col-md-6">
       <h1>Ranges</h1>
     </div>
-    <div class="col-md-6">
-      <a href="<?php echo URLROOT; ?>/ranges/add" class="btn btn-primary pull-right">
-        <i class="fa fa-pencil"></i> Add Range
-      </a>
-    </div>
+    <?php if (isset($_SESSION['user_id'])) : ?>
+      <div class="col-md-6">
+        <a href="<?php echo URLROOT; ?>/ranges/add" class="btn btn-primary pull-right">
+          <i class="fa fa-pencil"></i> Add Range
+        </a>
+      </div>
+    <?php endif; ?>
   </div>
   <?php foreach($data['ranges'] as $range) : ?>
     <div class="card card-body mb-3">

@@ -8,7 +8,7 @@
 <p><?php echo $data['range']->body; ?></p>
 
 <hr>
-<?php if ($data['range']->user_id == $_SESSION['user_id']) : ?>
+<?php if (isset($_SESSION['user_id'])) : ?>
   <a href="<?php echo URLROOT; ?>/ranges/edit/<?php echo $data['range']->id; ?>" class="btn btn-dark">Edit</a>
   <a href="<?php echo URLROOT; ?>/pharmaceuticals/add/<?php echo $data['range']->id; ?>" class="btn btn-dark">Add Pharmaceutical</a>
   <form class="pull-right" action="<?php echo URLROOT; ?>/ranges/delete/<?php echo $data['range']->id; ?>" method="POST">

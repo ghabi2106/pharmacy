@@ -1,9 +1,9 @@
 <?php
   class Pharmaceuticals extends Controller {
     public function __construct(){
-      if(!isLoggedIn()){
+      /* if(!isLoggedIn()){
         redirect('users/login');
-      }
+      } */
 
       $this->pharmaceuticalModel = $this->model('Pharmaceutical');
       $this->userModel = $this->model('User');
@@ -100,6 +100,10 @@
     }
 
     public function edit($id){
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitize POST array
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -167,6 +171,10 @@
     }
 
     public function delete($id){
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+      
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Get existing pharmaceutical from model
         $pharmaceutical = $this->pharmaceuticalModel->getPharmaceuticalById($id);

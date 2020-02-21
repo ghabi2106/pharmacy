@@ -5,9 +5,9 @@
     }
     
     public function index(){
-      if(isLoggedIn()){
+      /* if(isLoggedIn()){
         redirect('ranges');
-      }
+      } */
 
       $data = [
         'title' => 'Pharmacy',

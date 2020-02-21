@@ -3,9 +3,9 @@ class Ranges extends Controller
 {
   public function __construct()
   {
-    if (!isLoggedIn()) {
+    /* if (!isLoggedIn()) {
       redirect('users/login');
-    }
+    } */
 
     $this->rangeModel = $this->model('Range');
     $this->pharmaceuticalModel = $this->model('Pharmaceutical');
@@ -26,6 +26,10 @@ class Ranges extends Controller
 
   public function add()
   {
+    if (!isLoggedIn()) {
+      redirect('users/login');
+    }
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Sanitize POST array
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -104,6 +108,10 @@ class Ranges extends Controller
 
   public function edit($id)
   {
+    if (!isLoggedIn()) {
+      redirect('users/login');
+    }
+    
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Sanitize POST array
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);

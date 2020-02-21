@@ -4,11 +4,13 @@
     <div class="col-md-6">
       <h1>Pharmaceuticals</h1>
     </div>
-    <div class="col-md-6">
-      <a href="<?php echo URLROOT; ?>/pharmaceuticals/add" class="btn btn-primary pull-right">
-        <i class="fa fa-pencil"></i> Add Pharmaceutical
-      </a>
-    </div>
+    <?php if (isset($_SESSION['user_id'])) : ?>
+      <div class="col-md-6">
+        <a href="<?php echo URLROOT; ?>/pharmaceuticals/add" class="btn btn-primary pull-right">
+          <i class="fa fa-pencil"></i> Add Pharmaceutical
+        </a>
+      </div>
+    <?php else : ?>
   </div>
   <?php foreach($data['pharmaceuticals'] as $pharmaceutical) : ?>
     <div class="card card-body mb-3">
