@@ -6,7 +6,7 @@
     
     public function index(){
       /* if(isLoggedIn()){
-        redirect('ranges');
+        redirect('categories');
       } */
 
       $data = [

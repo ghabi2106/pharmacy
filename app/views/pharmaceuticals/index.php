@@ -10,7 +10,7 @@
           <i class="fa fa-pencil"></i> Add Pharmaceutical
         </a>
       </div>
-    <?php else : ?>
+      <?php endif; ?>
   </div>
   <?php foreach($data['pharmaceuticals'] as $pharmaceutical) : ?>
     <div class="card card-body mb-3">
@@ -21,5 +21,5 @@
       <p class="card-text"><?php echo $pharmaceutical->body; ?></p>
       <a href="<?php echo URLROOT; ?>/pharmaceuticals/show/<?php echo $pharmaceutical->pharmaceuticalId; ?>" class="btn btn-dark">More</a>
     </div>
-  <?php endforeach; ?>
+    <?php endforeach; ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

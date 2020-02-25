@@ -10,6 +10,16 @@
         <span class="invalid-feedback"><?php echo $data['title_err']; ?></span>
       </div>
       <div class="form-group">
+        <label for="price">Price: <sup>*</sup></label>
+        <input type="text" name="price" class="form-control form-control-lg <?php echo (!empty($data['price_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['price']; ?>">
+        <span class="invalid-feedback"><?php echo $data['price_err']; ?></span>
+      </div>
+      <div class="form-group">
+        <label for="popular">Popular: </label>
+        <input type="checkbox" name="popular" value="1" />
+      </div>
+      
+      <div class="form-group">
         <label for="body">Body: <sup>*</sup></label>
         <textarea name="body" class="form-control form-control-lg <?php echo (!empty($data['body_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['body']; ?></textarea>
         <span class="invalid-feedback"><?php echo $data['body_err']; ?></span>
@@ -18,6 +28,11 @@
         <label for="img">Image: <sup>*</sup></label>
         <input type="file" name="img" class="form-control form-control-lg <?php echo (!empty($data['img_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['img']; ?>">
         <span class="invalid-feedback"><?php echo $data['img_err']; ?></span>
+      </div>
+      <div class="form-group">
+        <label for="img1">Image: <sup>*</sup></label>
+        <input type="file" name="img1" class="form-control form-control-lg <?php echo (!empty($data['img1_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['img1']; ?>">
+        <span class="invalid-feedback"><?php echo $data['img1_err']; ?></span>
       </div>
       <input type="submit" class="btn btn-success" value="Submit">
     </form>
