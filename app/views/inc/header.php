@@ -407,6 +407,8 @@
     }
   </style>
 
+<link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css" type="text/css" media="all" />
+
   <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.video.min.js"></script>
   <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
   <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>

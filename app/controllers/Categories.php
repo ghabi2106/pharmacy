@@ -1,4 +1,7 @@
 <?php
+
+use voku\helper\Paginator;
+
 class Categories extends Controller
 {
   public function __construct()
@@ -50,7 +53,7 @@ class Categories extends Controller
 
       $imgFile = $_FILES['img']['name'];
       $tmp_dir = $_FILES['img']['tmp_name'];
-      $imgSize = $_FILES['img']['size'];    
+      $imgSize = $_FILES['img']['size'];
 
       // Validate data
       if (empty($data['title'])) {
@@ -115,7 +118,7 @@ class Categories extends Controller
     if (!isLoggedIn()) {
       redirect('users/login');
     }
-    
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Sanitize POST array
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -171,14 +174,30 @@ class Categories extends Controller
 
   public function show($id)
   {
+    // create a new object
+    $pages = new Paginator('10', 'p');
+
+    // set the total records, calling a method to get the number of records from a model
+    $total = $this->pharmaceuticalModel->get_search_count($id);
+    $pages->set_total($total);
+
+    // calling a method to get the records with the limit set
+    $pharmaceuticals = $this->pharmaceuticalModel->get_search($id, $pages->get_limit());
+
+    // create the nav menu
+    $page_links = $pages->page_links();
+
+    // $pharmaceuticals = $this->pharmaceuticalModel->getPharmaceuticalsByCategoryId($id);
     $category = $this->categoryModel->getCategoryById($id);
-    $pharmaceuticals = $this->pharmaceuticalModel->getPharmaceuticalsByCategoryId($id);
+    $categories = $this->categoryModel->getCategories();
     $user = $this->userModel->getUserById($category->user_id);
 
     $data = [
+      'categories' => $categories,
       'category' => $category,
       'user' => $user,
-      'pharmaceuticals' => $pharmaceuticals
+      'pharmaceuticals' => $pharmaceuticals,
+      'page_links' => $page_links
     ];
 
     $this->view('categories/show', $data);

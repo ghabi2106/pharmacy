@@ -1653,9 +1653,10 @@ a.add_to_wishlist {
       padding: 10px 15px;
       font-weight: 700; }
     .products-bottom-wrap nav.woocommerce-pagination ul a,.products-bottom-wrap nav.woocommerce-pagination ul li a {
-      padding: 10px 15px;
-      font-weight: 700;
-      color: #000; }
+      /* padding: 10px 15px;
+      font-weight: 700; */
+      color: #000; 
+    }
       .products-bottom-wrap nav.woocommerce-pagination ul a:hover,.products-bottom-wrap nav.woocommerce-pagination ul li a:hover {
         background: transparent;
         color: #4384f6; }

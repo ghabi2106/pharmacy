@@ -93,6 +93,24 @@
       return $results;
     }
 
+    public function get_search($category_id, $limit_num){
+      $this->db->query('SELECT * FROM pharmaceuticals WHERE category_id = :category_id ' . $limit_num);
+      $this->db->bind(':category_id', $category_id);
+
+      $results = $this->db->resultSet();
+
+      return $results;
+    }
+
+    public function get_search_count($category_id){
+      $this->db->query('SELECT id FROM pharmaceuticals WHERE category_id = :category_id');
+      $this->db->bind(':category_id', $category_id);
+
+      $count = $this->db->rowCount();
+
+      return $count;
+    }
+
     public function getPharmaceuticalsPopular($limit_num){
       $this->db->query('SELECT * FROM pharmaceuticals WHERE popular = 1 ORDER BY created_at ASC LIMIT :limit_num');
       $this->db->bind(':limit_num', $limit_num);

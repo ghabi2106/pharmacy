@@ -29,21 +29,13 @@
               <li class="cat-item cat-item-275 current-cat cat-parent">
                 <a href="indexc068.html?product_cat=pharmacies">Pharmaceuticals</a>
                 <ul class='children'>
-                  <li class="cat-item cat-item-317">
-                    <a href="indexfcc2.html?product_cat=drug">Drug Testing</a>
-                  </li>
-                  <li class="cat-item cat-item-315">
-                    <a href="index15b5.html?product_cat=medication">Medication Aids</a>
-                  </li>
-                  <li class="cat-item cat-item-353">
-                    <a href="indexa152.html?product_cat=nasal">Nasal Medications</a>
-                  </li>
-                  <li class="cat-item cat-item-324">
-                    <a href="index7157.html?product_cat=needles">Needles &amp; Syringes</a>
-                  </li>
-                  <li class="cat-item cat-item-325">
-                    <a href="indexe890.html?product_cat=supply">Pharmacy Supply</a>
-                  </li>
+                  <?php foreach ($data['categories'] as $category) : ?>
+                    <li class="cat-item cat-item-317">
+                      <a href="<?php echo URLROOT; ?>/categories/show/<?php echo $category->id; ?>">
+                        <?php echo $category->title; ?>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
                 </ul>
               </li>
               <li class="cat-item cat-item-335">
@@ -194,15 +186,10 @@
             </div>
             <div class="products-bottom-wrap clearfix">
               <nav class="woocommerce-pagination">
-                <ul class='page-numbers'>
-                  <li><span aria-current='page' class='page-numbers current'>1</span></li>
-                  <li><a class='page-numbers' href='index84f3.html?product_cat=pharmacies&amp;paged=2'>2</a></li>
-                  <li><a class='page-numbers' href='indexe71d.html?product_cat=pharmacies&amp;paged=3'>3</a></li>
-                  <li><a class="next page-numbers" href="index84f3.html?product_cat=pharmacies&amp;paged=2">&rarr;</a></li>
-                </ul>
+                <?php echo $data['page_links'] ?>
               </nav>
-              <p class="woocommerce-result-count">
-                Showing 1&ndash;9 of 23 results</p>
+              <!-- <p class="woocommerce-result-count">
+                Showing 1&ndash;9 of 23 results</p> -->
             </div>
 
           </div><!-- #content -->

@@ -6,7 +6,7 @@
       $this->db = new Database;
     }
 
-    public function getCategories(){
+    /* public function getCategories(){
       $this->db->query('SELECT *,
                         categories.id as categoryId,
                         users.id as userId,
@@ -15,6 +15,17 @@
                         FROM categories
                         INNER JOIN users
                         ON categories.user_id = users.id
+                        ORDER BY categories.created_at DESC
+                        ');
+
+      $results = $this->db->resultSet();
+
+      return $results;
+    } */
+
+    public function getCategories(){
+      $this->db->query('SELECT *
+                        FROM categories
                         ORDER BY categories.created_at DESC
                         ');
 
