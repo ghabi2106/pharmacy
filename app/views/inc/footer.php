@@ -54,11 +54,11 @@
 
           @media only screen and (max-width: 999px) {
             body.kc-css-system .kc-css-549031 {
-              width: 40%!important;
+              width: 40% !important;
             }
 
             body.kc-css-system .kc-css-88339 {
-              width: 50%!important;
+              width: 50% !important;
             }
           }
 
@@ -86,7 +86,7 @@
 
           @media only screen and (max-width: 999px) {
             body.kc-css-system .kc-css-549031 {
-              width: 40%!important;
+              width: 40% !important;
             }
 
             body.kc-css-system .kc-css-88339 {
@@ -96,11 +96,11 @@
 
           @media only screen and (max-width: 767px) {
             body.kc-css-system .kc-css-549031 {
-              width: 100%!important;
+              width: 100% !important;
             }
 
             body.kc-css-system .kc-css-88339 {
-              width: 100%!important;
+              width: 100% !important;
             }
           }
         </style>
@@ -171,8 +171,8 @@
                     <p>
                       <a href="index4cf3.html?page_id=1780">Technical Support<br />
                         Documents &amp; Forms<br /> </a>
-                        <a href="indexfb02.html?page_id=1719">Return Goods Policy<br /> </a>
-                        <a href="index4cf3.html?page_id=1780">Contact Us</a>
+                      <a href="indexfb02.html?page_id=1719">Return Goods Policy<br /> </a>
+                      <a href="index4cf3.html?page_id=1780">Contact Us</a>
                     </p>
                   </div>
                 </div>
@@ -221,24 +221,28 @@
   </div>
   <section class="opal-copyright clearfix">
     <div class="container">
-      <a href="#" class="scrollup"><span class="fa fa-angle-up"></span></a>
-      <div class="copyright-link pull-right nav-menu hidden-xs">
-        <div class="menu-footer-1-container">
-          <ul id="menu-footer-1" class="menu">
-            <li id="menu-item-9797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9797">
-              <a href="indexb41a.html?page_id=1711">Change Password</a>
-            </li>
-            <li id="menu-item-9798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9798">
-              <a href="indexa8aa.html?page_id=1713">Edit My Address</a>
-            </li>
-            <li id="menu-item-9799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9799">
-              <a href="index13ca.html?page_id=1715">Logout</a>
-            </li>
-          </ul>
+      <a href="#" class="scrollup">
+        <span class="fa fa-angle-up"></span>
+      </a>
+      <?php if (isset($_SESSION['user_id'])) : ?>
+        <div class="copyright-link pull-right nav-menu hidden-xs">
+          <div class="menu-footer-1-container">
+            <ul id="menu-footer-1" class="menu">
+              <li id="menu-item-9797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9797">
+                <a href="">Change Password</a>
+              </li>
+              <li id="menu-item-9798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9798">
+                <a href="">Edit My Address</a>
+              </li>
+              <li id="menu-item-9799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9799">
+                <a href="">Logout</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      <?php endif; ?>
       <div class="text-copyright">
-        © 2017 Assaad Pharmacies. All Rights Reserved.
+        © <?php echo date('Y'); ?> Assaad Pharmacies. All Rights Reserved.
       </div>
     </div>
   </section>
@@ -256,74 +260,20 @@
     <nav class="navbar navbar-offcanvas navbar-static" role="navigation">
       <div class="navbar-collapse navbar-offcanvas-collapse">
         <ul id="main-menu-offcanvas" class="nav navbar-nav">
-          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-4420 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown active menu-item-4479 level-0 active  active ">
-            <a href="index.html">Home </a> <b class="caret"></b>
-            <ul class="dropdown-menu">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-4420 current_page_item active menu-item-8500 level-1 active  active ">
-                <a href="index.html">Home 1</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9191 level-1">
-                <a href="index2a7b.html?page_id=9189">Home 2</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9251 level-1">
-                <a href="indexd365.html?page_id=9249">Home 3</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-7359 level-0">
-            <a href="#">Shop </a> <b class="caret"></b>
-            <ul class="dropdown-menu">
-              <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-8101 level-1">
-                <a href="indexc068.html?product_cat=pharmacies">Shop with sidebar</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-8146 level-1">
-                <a href="indexfc64.html?product=original-penguin-mens-yarn-dye-pique-polo-with-woven-dobby-collar">Simple Product</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-7356 level-1">
-                <a href="index7f5d.html?product=serta-cr-43529pb-santa-cruz-collection-61inch-love-seat-platinum-fabric">External / Affiliate Product</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-8308 level-1">
-                <a href="indexf0e7.html?product=original-penguin-mens-yarn-dye-rugby-stripe-polo-jersey-heritage-slim-fit">Variable Product</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1767 level-0">
-            <a title="Page" href="#">Page </a> <b class="caret"></b>
-            <ul class="dropdown-menu">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4501 level-1">
-                <a href="index4cf3.html?page_id=1780">About Us</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1849 level-1">
-                <a href="indexa1b5.html?page_id=1846">FAQ</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5741 level-1">
-                <a href="indexdcd9.html?page_id=5739">404 Error</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9479 level-1">
-                <a href="indexdcf0.html?page_id=9473">Deals</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26 level-1">
-                <a href="index16e4.html?page_id=24">Contact Us</a>
-              </li>
-            </ul>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533 level-0">
+            <a href="<?php echo URLROOT; ?>">home</a>
           </li>
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533 level-0">
-            <a href="indexdc1c.html?page_id=5531">On Sale</a>
+            <a href="<?php echo URLROOT; ?>/pages/about">About Us</a>
           </li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8644 level-0">
-            <a href="#">Portfolio</a>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533 level-0">
+            <a href="<?php echo URLROOT; ?>/pages/faq">FAQ</a>
           </li>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-395 level-0">
-            <a href="index97bb.html?page_id=22">Blog </a>
-            <b class="caret"></b>
-            <ul class="dropdown-menu">
-              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8859 level-1">
-                <a href="indexaeb3.html?cat=29">Archive Page</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8860 level-1">
-                <a href="index5804.html?p=4384">Single Page</a>
-              </li>
-            </ul>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533 level-0">
+            <a href="<?php echo URLROOT; ?>/pages/deals">Deals</a>
+          </li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533 level-0">
+            <a href="<?php echo URLROOT; ?>/pages/log">Blog</a>
           </li>
         </ul>
       </div>

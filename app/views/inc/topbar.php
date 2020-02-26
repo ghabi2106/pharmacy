@@ -50,34 +50,32 @@
             </div>
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                 <ul class="list-style  pull-right">
-                    <li class="fa fa-pencil-square-o icon space-right-13" aria-hidden="true"></li>
-
-                    <ul class="account-links dropdown">
-                        <?php if (isset($_SESSION['user_id'])) : ?>
-                            <li>
-                                <a href="<?php echo URLROOT; ?>/users/register" class="opal-user-register">
-                                    <span class="fa fa-pencil"></span> Add User
-                                </a>
-                            </li>
-                            <li>
+                    <?php if (isset($_SESSION['user_id'])) : ?>
+                        <li>
+                            <a href="<?php echo URLROOT; ?>/users/register" class="opal-user-register">
+                                <span class="fa fa-pencil"></span> Add User
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="opal-user-register">
                                 <?php echo $_SESSION['user_name']; ?>
-                            </li>
-                            <li>
-                                <a href="<?php echo URLROOT; ?>/users/logout" class="opal-user-register">
-                                    <span class="fa fa-pencil"></span> Logout
-                                </a>
-                            </li>
-                        <?php else : ?>
-                            <li>
-                                <!-- <a href="" data-toggle="modal" data-target="#modalLoginForm" class="opal-user-login">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo URLROOT; ?>/users/logout" class="opal-user-register">
+                                <span class="fa fa-pencil"></span> Logout
+                            </a>
+                        </li>
+                    <?php else : ?>
+                        <li>
+                            <!-- <a href="" data-toggle="modal" data-target="#modalLoginForm" class="opal-user-login">
                                     <span class="fa fa-user"></span> Login
                                 </a> -->
-                                <a href="<?php echo URLROOT; ?>/users/login" class="opal-user-login">
-                                    <span class="fa fa-user"></span> Login
-                                </a>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
+                            <a href="<?php echo URLROOT; ?>/users/login" class="opal-user-login">
+                                <span class="fa fa-user"></span> Login
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
