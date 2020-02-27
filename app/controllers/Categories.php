@@ -176,30 +176,36 @@ class Categories extends Controller
   {
     // create a new object
     $pages = new Paginator('10', 'p');
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // Sanitize POST array
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-    // set the total records, calling a method to get the number of records from a model
-    $total = $this->pharmaceuticalModel->get_search_count($id);
-    $pages->set_total($total);
+    } else {
 
-    // calling a method to get the records with the limit set
-    $pharmaceuticals = $this->pharmaceuticalModel->get_search($id, $pages->get_limit());
+      // set the total records, calling a method to get the number of records from a model
+      $total = $this->pharmaceuticalModel->get_search_count($id);
+      $pages->set_total($total);
 
-    // create the nav menu
-    $page_links = $pages->page_links();
+      // calling a method to get the records with the limit set
+      $pharmaceuticals = $this->pharmaceuticalModel->get_search($id, null, $pages->get_limit());
 
-    // $pharmaceuticals = $this->pharmaceuticalModel->getPharmaceuticalsByCategoryId($id);
-    $category = $this->categoryModel->getCategoryById($id);
-    $categories = $this->categoryModel->getCategories();
-    $user = $this->userModel->getUserById($category->user_id);
+      // create the nav menu
+      $page_links = $pages->page_links();
 
-    $data = [
-      'categories' => $categories,
-      'category' => $category,
-      'user' => $user,
-      'pharmaceuticals' => $pharmaceuticals,
-      'page_links' => $page_links
-    ];
+      // $pharmaceuticals = $this->pharmaceuticalModel->getPharmaceuticalsByCategoryId($id);
+      $category = $this->categoryModel->getCategoryById($id);
+      $categories = $this->categoryModel->getCategories();
+      $user = $this->userModel->getUserById($category->user_id);
 
+      $data = [
+        'categories' => $categories,
+        'category' => $category,
+        'user' => $user,
+        'pharmaceuticals' => $pharmaceuticals,
+        'page_links' => $page_links
+      ];
+    }
     $this->view('categories/show', $data);
   }
 

@@ -464,14 +464,14 @@
                               <?php foreach ($data['categories'] as $category) : ?>
                                 <div class="items">
                                   <div class="team-header">
-                                    <a href="<?php echo URLROOT; ?>/categories/show/<?php echo $category->categoryId; ?>">
+                                    <a href="<?php echo URLROOT; ?>/categories/show/<?php echo $category->id; ?>">
                                       <img width="370" height="270" src="<?php echo URLROOT; ?>/img/uploads/categories/<?php echo $category->img; ?>" class="attachment-full size-full wp-post-image" alt="" />
                                     </a>
                                   </div>
 
                                   <div class="text">
                                     <span class="pull-left"><?php echo $category->title; ?></span>
-                                    <a class="pull-left" href="<?php echo URLROOT; ?>/categories/show/<?php echo $category->categoryId; ?>"><span class="shop_now">View Now</span><i class="fa fa-arrow-circle-o-right"></i>
+                                    <a class="pull-left" href="<?php echo URLROOT; ?>/categories/show/<?php echo $category->id; ?>"><span class="shop_now">View Now</span><i class="fa fa-arrow-circle-o-right"></i>
                                     </a>
                                   </div>
                                 </div>

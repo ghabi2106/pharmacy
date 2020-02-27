@@ -319,7 +319,7 @@ class Pharmaceuticals extends Controller
 
   public function show($id)
   {
-    $pharmaceutical = $this->pharmaceuticalModel->getPharmaceuticalById($id);
+    $pharmaceutical = $this->pharmaceuticalModel->getPharmaceuticalCatById($id);
     $user = $this->userModel->getUserById($pharmaceutical->user_id);
 
     $data = [

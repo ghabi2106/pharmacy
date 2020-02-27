@@ -308,7 +308,7 @@
       .html(errorMessage);
   }
 </script>
-<link rel="stylesheet" id="woocommercebulkdiscount-style-css" href="wp-content/plugins/woocommerce-bulk-discount/css/stylecbf4.css?ver=4.9.4" type="text/css" media="all" />
+<link rel="stylesheet" id="woocommercebulkdiscount-style-css" href="<?php echo URLROOT; ?>/wp-content/plugins/woocommerce-bulk-discount/css/stylecbf4.css?ver=4.9.4" type="text/css" media="all" />
 <script type="text/javascript">
   /* <![CDATA[ */
   var wpcf7 = {
@@ -319,8 +319,8 @@
   };
   /* ]]> */
 </script>
-<script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/scripts3c21.js?ver=5.1.1"></script>
-<script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70"></script>
+<script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/contact-form-7/includes/js/scripts3c21.js?ver=5.1.1"></script>
+<script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70"></script>
 <script type="text/javascript">
   /* <![CDATA[ */
   var wc_add_to_cart_params = {
@@ -334,6 +334,37 @@
   /* ]]> */
 </script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min822f.js?ver=3.6.2"></script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var wc_single_product_params = {
+    i18n_required_rating_text: "Please select a rating",
+    review_rating_required: "yes",
+    flexslider: {
+      rtl: false,
+      animation: "slide",
+      smoothHeight: true,
+      directionNav: false,
+      controlNav: "thumbnails",
+      slideshow: false,
+      animationSpeed: 500,
+      animationLoop: false,
+      allowOneSlide: false
+    },
+    zoom_enabled: "",
+    zoom_options: [],
+    photoswipe_enabled: "",
+    photoswipe_options: {
+      shareEl: false,
+      closeOnScroll: false,
+      history: false,
+      hideAnimationDuration: 0,
+      showAnimationDuration: 0
+    },
+    flexslider_enabled: ""
+  };
+  /* ]]> */
+</script>
+<script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min822f.js?ver=3.6.2"></script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4"></script>
 <script type="text/javascript">
   /* <![CDATA[ */
@@ -343,7 +374,7 @@
   };
   /* ]]> */
 </script>
-<script type="text/javascript" src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min822f.js?ver=3.6.2"></script>
+<script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min822f.js?ver=3.6.2"></script>
 <script type="text/javascript">
   /* <![CDATA[ */
   var wc_cart_fragments_params = {
@@ -402,6 +433,7 @@
   /* ]]> */
 </script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl8ce6.js?ver=2.2.10"></script>
+<script type="text/javascript" src="<?php echo URLROOT; ?>/wp-includes/js/comment-reply.mincbf4.js?ver=4.9.4"></script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/themes/medicare/js/owl-carousel/owl.carouself945.js?ver=20150315"></script>
 <script type="text/javascript">
   /* <![CDATA[ */
@@ -410,13 +442,16 @@
   };
   /* ]]> */
 </script>
-<script type="text/javascript" src="wp-content/themes/medicare/js/functionsf945.js?ver=20150315"></script>
+<script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/themes/medicare/js/functionsf945.js?ver=20150315"></script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-includes/js/jquery/suggest.min3914.js?ver=1.1-20110113"></script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/themes/medicare/js/woocommerce6a41.js?ver=20131022"></script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/kingcomposer/assets/frontend/js/kingcomposer.min4dc3.js?ver=2.8.2"></script>
 <script type="text/javascript" src="<?php echo URLROOT; ?>/wp-includes/js/wp-embed.mincbf4.js?ver=4.9.4"></script>
-</body>
 
-<!-- Mirrored from demo2.themelexus.com/medicare/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2020 19:40:36 GMT -->
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<script async="async" type="text/javascript" src="<?php echo URLROOT; ?>/wp-content/plugins/akismet/_inc/form0235.js?ver=4.1.1"></script>
+
+</body>
 
 </html>
