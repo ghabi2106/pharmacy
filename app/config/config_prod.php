@@ -10,7 +10,7 @@
   // Upload Root
   define('UPLOADROOT', dirname(dirname(dirname(__FILE__))) . '/public/img/uploads');
   // URL Root
-  define('URLROOT', 'https://midcarepharmacy.epizy.com/pharmacy//');
+  define('URLROOT', 'https://midcarepharmacy.epizy.com/pharmacy');
   // Site Name
   define('SITENAME', 'Pharmacy');
   // App Version
